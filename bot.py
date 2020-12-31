@@ -16,10 +16,12 @@ guild = None
 mentorRequestsChannel = None
 
 USERS = {}
-KEYWORDS = ["Python", "Javascript", "C/C++/C#", "Kotlin", "Java", "React", 
-    "Android App", "IOS App", "Web Development", "Hardware/Circuitry", "ML/AI", 
-    "Graphics", "UX/Design", "Game Design", "SQL/Databases", "Cloud Services/DNS", 
-    "Git", "Other/None"]
+KEYWORDS = ["Python", "C/C++/C#", "Java", "JavaSpring", "Kotlin", "Objective C", "Swift", "React", 
+    "HTML/CSS", "Javascript", "NodeJS", "ExpressJS", "AngularJS", "VueJS", "PHP", "Laravel", 
+    "Ruby", "Ruby on Rails", "Django", "Android App", "IOS App", "Web Development", 
+    "Hardware/Circuitry", "Arduino", "Raspberry Pi", "ML/AI", "Graphics", 
+    "UX/Design", "Game Design", "SQL/Databases", "Cloud Services/DNS", 
+    "Git", "VR/AR", "Other/None"]
 
 # creates a mentor request for a user, given their id
 def createMentorRequest(uid):
