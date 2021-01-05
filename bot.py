@@ -135,7 +135,7 @@ async def on_message(message):
                 USERS[message.author.id]["summary"] = message.content.strip()[:550]
                 USERS[message.author.id]["status"] = 4
                 print(f"Sending response #4 to {message.author.id} ({message.author.name}).")
-                keywordsList = '\t\t\t'.join([f"{i})\xa0{KEYWORDS[i]}" for i in range(len(KEYWORDS))])
+                keywordsList = '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0 '.join([f"{i})\xa0{KEYWORDS[i]}" for i in range(len(KEYWORDS))])
                 await message.channel.send("Select between one and three keywords that best "
                     "represent your issue: (e.g., '1, 8, 11')\n" + keywordsList)
                 return
