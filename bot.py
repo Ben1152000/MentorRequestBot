@@ -134,6 +134,8 @@ async def on_message(message):
                 return
             
             else:
+                if len(message.content.strip()) > 500:
+                    await message.channel.send("The message was too long, so it was truncated to 500 characters.")
                 USERS[message.author.id]["summary"] = message.content.strip()[:550]
                 USERS[message.author.id]["status"] = 4
                 print(f"Sending response #4 to {message.author.id} ({message.author.name}).")
@@ -182,6 +184,8 @@ async def on_message(message):
                 return
             
             else:
+                if len(message.content.strip()) > 1000:
+                    await message.channel.send("The message was too long, so it was truncated to 1000 characters.")
                 USERS[message.author.id]["description"] = message.content.strip()[:1050]
                 USERS[message.author.id]["status"] = 6
                 print(f"Sending response #6 to {message.author.id} ({message.author.name}).")
@@ -202,6 +206,8 @@ async def on_message(message):
                 return
             
             else:
+                if len(message.content.strip()) > 1000:
+                    await message.channel.send("The message was too long, so it was truncated to 1000 characters.")
                 USERS[message.author.id]["attempts"] = message.content.strip()[:1050]
                 USERS[message.author.id]["status"] = 7
                 print(f"Sending response #7 to {message.author.id} ({message.author.name}).")
